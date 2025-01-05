@@ -1,3 +1,7 @@
+import time
+
+# ishlash tezligini hisoblash uchun time() functiondan foydalanamiz
+time_stard = time.time()
 phones = [{"brand":"Samsung","model":"Samsung A777","date":2008},
 {"brand":"Huawei","model":"Huawei MediaPad T1 10","date":2015},
 {"brand":"Nokia","model":"Nokia 110 (2019)","date":2019},
@@ -1024,3 +1028,7 @@ for element in set(list_years):
         if i + 2000 == element:        
             count = list_years.count(element)
             print("     - {} yilda: {} ta {}%".format(element, count, count * 100 / len(list_years)))
+# ishlash tezligini hisoblash uchun time() functiondan foydalanamiz
+time_end = time.time() - time_stard
+
+print("ishlash vaqt oraligi - {}".format(round(time_end, 3)))
