@@ -6,9 +6,24 @@ Sizga quyidagi foydalanuvchilar ma’lumotlari **users** berilgan (users.py fayl
 
 ```python
 users = [
-    {"id": 998, "first_name": "Humbert", "last_name": "Richford", "email": "hrichfordrp@gizmodo.com", "gender": "Male", "ip_address": "250.4.246.253"},
-    {"id": 999, "first_name": "Bryanty", "last_name": "Rosenvasser", "email": "brosenvasserrq@discovery.com", "gender": "Male", "ip_address": "186.72.250.20"},
-    {"id": 1000, "first_name": "Karita", "last_name": "Truter", "email": "ktruterrr@mapy.cz", "gender": "Female", "ip_address": "176.154.178.243"}
+    {"id": 998, 
+    "first_name": "Humbert", 
+    "last_name": "Richford", 
+    "email": "hrichfordrp@gizmodo.com", 
+    "gender": "Male", 
+    "ip_address": "250.4.246.253"},
+    {"id": 999, 
+    "first_name": "Bryanty", 
+    "last_name": "Rosenvasser", 
+    "email": "brosenvasserrq@discovery.com", 
+    "gender": "Male", 
+    "ip_address": "186.72.250.20"},
+    {"id": 1000, 
+    "first_name": "Karita", 
+    "last_name": "Truter", 
+    "email": "ktruterrr@mapy.cz", 
+    "gender": "Female", 
+    "ip_address": "176.154.178.243"}
 ]
 ```
 

@@ -997,13 +997,28 @@ users = [{"id":1,"first_name":"Angeline","last_name":"Timothy","email":"atimothy
 {"id":997,"first_name":"Jeane","last_name":"Chitson","email":"jchitsonro@twitpic.com","gender":"Bigender","ip_address":"228.118.18.68"},
 {"id":998,"first_name":"Humbert","last_name":"Richford","email":"hrichfordrp@gizmodo.com","gender":"Male","ip_address":"250.4.246.253"},
 {"id":999,"first_name":"Bryanty","last_name":"Rosenvasser","email":"brosenvasserrq@discovery.com","gender":"Male","ip_address":"186.72.250.20"},
-{"id":1000,"first_name":"Karita","last_name":"Truter","email":"ktruterrr@mapy.cz","gender":"Female","ip_address":"176.154.178.243"}]
+{"id":1000,"first_name":"Karita","last_name":"Truter","email":"ktruterrr@mapy.cz","gender":"Female","ip_address":"176.154.178.243"},
+]
+
+# ayyollar soni 
+count_Female = 0
+
+# quyidagi loop orqali MO da ayyollar sonini aniqlash uchun
+for women in users:
+    if women['gender'] == 'Female':
+        count_Female +=1
+
+# Erkaklar soni 
+count_Male = len(users) - count_Female
+
+# Erkaklar soni foizda
+Male_foiz = count_Female * 100 / len(users)
+
+# Ayollar soni foizda
+Female_foiz = count_Male * 100 / len(users)
 
 
-# code yozing
-# natija quyidagicha chiqsin
-"""
-Hisobot:
-- Erkaklar: 500 ta, 50%i
-- Ayollar: 500 ta, 50%i
-"""
+
+print("Hisobot")
+print(" - Erkaklar: {} ta, {}%".format(count_Male, Male_foiz))
+print(" - Ayollar: {} ta, {}%".format(count_Female, Female_foiz))

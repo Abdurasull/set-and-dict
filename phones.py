@@ -1000,16 +1000,27 @@ phones = [{"brand":"Samsung","model":"Samsung A777","date":2008},
 {"brand":"Motorola","model":"Motorola Moto G9 (India)","date":2020}]
 
 # code yozing
-# natija quyidagicha chiqsin
-"""
-Hisobot:
-- Brandlar:
-    - Samsung telefonlar: 300 ta 30%i
-    - Motorolla telefonlar: 150 ta 15%i
-    ....
-- Yillar (2000-2025):
-    - 2000 yilda: 20 ta 2%i
-    - 2001 yilda: 40 ta 4%i
-    - 2002 yilda: 70 ta 7%i
-    ....
-"""
+
+# brandlarni hammasini alohida listga joylab olish uchun bo`sh list_brands nomli list yaratib olamiz
+list_brinds = []
+
+# yillarni hammasini alohida listga joylab olish uchun bo`sh list_years nomli list yaratib olamiz
+list_years = []
+# barcha brandlarni for loop orqali listimizga joylab olamiz 
+for element in phones:
+    list_brinds.append(element["brand"])
+    list_years.append(element["date"])
+# yana for loop dan foydalanib Branddagi telefonlar sonini aniqlab ekranga chop etamiz 
+print("Hisobot:")
+print("- Brandlar:")
+for element in set(list_brinds):
+    count = list_brinds.count(element)
+    print("     - {} telefonlari: {} ta {}%".format(element, count, count * 100 / len(list_brinds)))
+
+# yana for loop dan foydalanib date dagi (2000-2025) yillarda telefonlar sonini aniqlab ekranga chop etamiz 
+print("- Yillar (2000-2025):")
+for element in set(list_years):
+    for i in range(6):
+        if i + 2000 == element:        
+            count = list_years.count(element)
+            print("     - {} yilda: {} ta {}%".format(element, count, count * 100 / len(list_years)))
